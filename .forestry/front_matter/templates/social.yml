@@ -1,0 +1,43 @@
+---
+label: Social Configuration
+hide_body: true
+is_partial: false
+fields:
+  - type: boolean
+    name: enabled
+    label: Enabled
+    description: Displays the social section in the page footer
+    default: false
+  - type: text
+    name: title
+    label: Section Title
+    description: The bold text displayed at the top of the section
+  - type: textarea
+    name: social_content
+    label: Section Text
+    description: The text displayed below the section title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: field_group_list
+    name: social_links
+    label: Social Media
+    description: A list of social media icons displayed along the bottom of the section
+    fields:
+      - type: text
+        name: title
+        label: Icon Title
+        config:
+          required: true
+      - type: text
+        name: icon
+        label: Icon
+        description: Font Awesome icon
+        config:
+          required: true
+      - type: text
+        name: link_url
+        label: URL
+    config:
+      labelField: title
