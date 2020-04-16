@@ -1,16 +1,15 @@
 ---
 label: Menu Configuration
 hide_body: true
-is_partial: false
 fields:
-  - type: field_group_list
-    name: actions
-    label: Menu Action Buttons
-    description: The action buttons displayed at the bottom of the menu
-    fields:
-      - type: include
-        name: include_action
-        label: Action
-        template: action
-    config:
-      labelField: label
+- type: field_group_list
+  name: actions
+  label: Menu Action Buttons
+  description: The action buttons displayed at the bottom of the menu
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+  config:
+    labelField: label
